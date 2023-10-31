@@ -54,13 +54,16 @@ function cargarSociosJSON () {
 // Funcion que añade socios al array cuando arranca la página web
 function aniadirSociosInicialesArray(data) {
   for(let i = 0; i < data.length; i++) {
-    let nomb = data[i].fnombre;
-    let ape = data[i].fapellido;
+    let nombre = data[i].fnombre;
+    let apellido = data[i].fapellido;
     let ident = data[i].id;
-    let socio = new Socio(nomb, ape, ident);
+    let socio = new Socio(nombre, apellido, ident);
     arraySocios.push(socio);
   }
 }
+
+
+// EJERCICIO 2
 
 // Función que captura los datos del socio introducidos en el formulario
 function capturarDatosSocio () {
@@ -83,7 +86,7 @@ function crearID () {
 }
 
 
-// EJERCICIO 2
+// EJERCICIO 3
 
 // Función que elimina la lista pintada previamente, recorre array y pinta socios 
 function pintarListaSocios () {
